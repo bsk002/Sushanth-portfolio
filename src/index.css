@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anton", "Space Grotesk", sans-serif;
+  --font-comic: "Permanent Marker", cursive;
+  --font-grotesk: "Space Grotesk", sans-serif;
+  
+  --color-comic-yellow: #FFE500;
+  --color-comic-red: #FF2B2B;
+  --color-comic-blue: #2445EA;
+  --color-comic-lime: #B8FF00;
+  --color-comic-orange: #FF5E00;
+  --color-cream: #FAF7EE;
+  --color-cream-card: #FFFFFF;
+  --color-dark: #0F0F10;
+  --color-dark-panel: #18181A;
+  --color-accent: #FFE500;
+  --color-accent-purple: #8B3DFF;
+  --color-accent-lime: #B8FF00;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #0F0F10;
+    color: #FAF7EE;
+    antialiased: true;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+  
+  ::selection {
+    background-color: #FFE500;
+    color: #000000;
+  }
+}
+
+@layer utilities {
+  .text-huge {
+    font-size: clamp(3.5rem, 14vw, 11rem);
+    line-height: 0.88;
+    letter-spacing: -0.04em;
+  }
+  
+  .text-editorial {
+    font-size: clamp(2.4rem, 7.5vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+  }
+
+  .font-comic {
+    font-family: var(--font-comic);
+  }
+
+  .font-grotesk {
+    font-family: var(--font-grotesk);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  /* Comic hard neo-brutalist shadows */
+  .comic-shadow-sm {
+    box-shadow: 3px 3px 0px #000000;
+  }
+
+  .comic-shadow {
+    box-shadow: 5px 5px 0px #000000;
+  }
+
+  .comic-shadow-lg {
+    box-shadow: 8px 8px 0px #000000;
+  }
+
+  .comic-shadow-yellow {
+    box-shadow: 6px 6px 0px #FFE500;
+  }
+
+  .comic-shadow-red {
+    box-shadow: 6px 6px 0px #FF2B2B;
+  }
+
+  .comic-shadow-blue {
+    box-shadow: 6px 6px 0px #2445EA;
+  }
+
+  .comic-shadow-white {
+    box-shadow: 5px 5px 0px #FAF7EE;
+  }
+
+  /* Text Stroke effects */
+  .text-stroke-black {
+    -webkit-text-stroke: 2px #000000;
+  }
+
+  .text-stroke-white {
+    -webkit-text-stroke: 2px #FAF7EE;
+  }
+
+  .text-stroke-yellow {
+    -webkit-text-stroke: 2px #FFE500;
+  }
+
+  /* Halftone and Comic Texture patterns */
+  .bg-halftone-dark {
+    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px);
+    background-size: 16px 16px;
+  }
+
+  .bg-halftone-yellow {
+    background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.22) 2px, transparent 2px);
+    background-size: 14px 14px;
+  }
+
+  .bg-comic-dots {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 229, 0, 0.15) 1.5px, transparent 0);
+    background-size: 24px 24px;
+  }
+
+  .bg-comic-stripes {
+    background: repeating-linear-gradient(
+      -45deg,
+      rgba(0, 0, 0, 0.08),
+      rgba(0, 0, 0, 0.08) 10px,
+      transparent 10px,
+      transparent 20px
+    );
+  }
+
+  .bg-stripes-yellow {
+    background: repeating-linear-gradient(
+      -45deg,
+      #FFE500,
+      #FFE500 12px,
+      #000000 12px,
+      #000000 24px
+    );
+  }
+
+  /* Comic tape effect */
+  .comic-tape {
+    position: relative;
+  }
+  .comic-tape::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 90px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px dashed rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    z-index: 20;
+  }
+}
+
