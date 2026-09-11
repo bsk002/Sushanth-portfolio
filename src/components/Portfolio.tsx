@@ -43,23 +43,23 @@ export default function Portfolio() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section id="portfolio" className="py-28 md:py-36 px-6 bg-[#0F0F10] bg-halftone-dark relative overflow-hidden">
+    <section id="portfolio" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#0F0F10] bg-halftone-dark relative overflow-hidden">
       {/* Ambient background glow */}
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#FFE500]/5 rounded-full blur-[140px] -z-10" />
       
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start mb-16 md:mb-20 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start mb-8 sm:mb-10 md:mb-12 gap-5 md:gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-3">
+            <div className="flex items-center gap-2 mb-2.5">
               <ComicSticker text="CURATED CUTS" color="red" rotate="-1deg" />
             </div>
             <motion.span 
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-[#FFE500] uppercase tracking-[0.4em] text-xs md:text-sm mb-3 block font-extrabold font-grotesk"
+              className="text-[#FFE500] uppercase tracking-[0.25em] md:tracking-[0.35em] text-xs md:text-sm mb-2 block font-extrabold font-grotesk"
             >
               Selected Works
             </motion.span>
@@ -67,7 +67,7 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-editorial font-black tracking-tighter"
+              className="text-editorial font-black tracking-normal"
             >
               PORTFOLIO<span className="text-[#FFE500]">.</span>
             </motion.h2>
@@ -75,15 +75,15 @@ export default function Portfolio() {
           
           <Link 
             to="/portfolio"
-            className="group flex items-center gap-2.5 font-black uppercase tracking-wider text-xs md:text-sm bg-[#FFE500] text-black px-6 md:px-8 py-3.5 md:py-4 rounded-2xl border-[3px] border-black comic-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_#000] active:translate-x-1 active:translate-y-1 transition-all self-start md:self-end"
+            className="group flex items-center gap-2 font-black uppercase tracking-wider text-xs md:text-sm bg-[#FFE500] text-black px-5 md:px-7 py-3 md:py-3.5 rounded-2xl border-[3px] border-black comic-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_#000] active:translate-x-1 active:translate-y-1 transition-all self-start md:self-end"
           >
             View All Projects 
-            <ArrowUpRight size={20} className="stroke-[3px] group-hover:rotate-45 transition-transform" />
+            <ArrowUpRight size={18} className="stroke-[3px] group-hover:rotate-45 transition-transform" />
           </Link>
         </div>
 
         {/* 4 Comic Poster Panels */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-7">
           {projects.map((project, i) => (
             <motion.div
               key={i}
@@ -136,8 +136,8 @@ export default function Portfolio() {
               </div>
 
               {/* Card Bottom: Title and Footer strip */}
-              <div className="pt-3 px-1">
-                <h3 className="text-base md:text-lg font-black leading-snug font-sans text-neutral-900 group-hover:text-[#2445EA] transition-colors">
+              <div className="pt-2.5 px-1">
+                <h3 className="text-sm sm:text-base md:text-[17px] font-black leading-snug font-sans text-neutral-900 group-hover:text-[#2445EA] transition-colors">
                   {project.title}
                 </h3>
               </div>

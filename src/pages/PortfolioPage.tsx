@@ -170,9 +170,9 @@ const allProjects = [
     badgeColor: "red" as const,
   },
   {
-    title: "Typography & Grid Systems Masterclass",
-    category: "Design Workshop",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80",
+    title: "Banner Concept for Delight Building Solutions",
+    category: "Banner Concept",
+    image: "https://i.ibb.co/FbLpkxH4/banner.png",
     color: false,
     badgeColor: "blue" as const,
   },
@@ -182,31 +182,31 @@ export default function PortfolioPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <main className="min-h-screen bg-[#0F0F10] bg-halftone-dark pt-24 md:pt-32 relative overflow-hidden text-white">
+    <main className="min-h-screen bg-[#0F0F10] bg-halftone-dark pt-20 sm:pt-24 md:pt-28 relative overflow-hidden text-white">
       {/* Ambient background glows */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-[#FFE500]/5 rounded-full blur-[140px] -z-10" />
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#2445EA]/5 rounded-full blur-[140px] -z-10" />
 
       <Navbar />
       
-      <div className="max-w-7xl mx-auto px-6 pb-20 md:pb-32 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-12 sm:pb-16 md:pb-20 relative z-10">
         
         {/* Top Hero Banner in Archive */}
-        <div className="mb-14 md:mb-20">
+        <div className="mb-8 sm:mb-10 md:mb-12">
           
           <Link 
             to="/" 
-            className="inline-flex items-center gap-2.5 text-xs font-black uppercase tracking-wider text-black bg-[#FFE500] hover:bg-white border-[3px] border-black px-5 py-2.5 rounded-2xl comic-shadow hover:translate-y-[-2px] transition-all mb-8 md:mb-12 group"
+            className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-black bg-[#FFE500] hover:bg-white border-[3px] border-black px-4 sm:px-5 py-2 sm:py-2.5 rounded-2xl comic-shadow hover:translate-y-[-2px] transition-all mb-5 sm:mb-7 group"
           >
             <ArrowLeft size={16} className="stroke-[3px] group-hover:-translate-x-1 transition-transform" />
             <span>Back to Home</span>
           </Link>
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
             
             {/* Left Headline & Stats */}
             <div className="lg:col-span-7">
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-3">
                 <ComicSticker text="COMPLETE ARCHIVE // 2026" color="yellow" rotate="-1.5deg" />
               </div>
 
@@ -215,28 +215,28 @@ export default function PortfolioPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7 }}
               >
-                <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-display tracking-tight leading-none mb-6">
+                <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black font-display tracking-normal leading-none mb-4 sm:mb-5">
                   <span className="block text-white">B.S.K</span>
                   <span className="block text-stroke-white text-transparent">ARCHIVE</span>
                 </h1>
               </motion.div>
               
               {/* Stats Comic Badges */}
-              <div className="flex flex-wrap gap-4 md:gap-6 mt-6">
-                <div className="bg-[#FAF7EE] text-black p-4 md:p-6 rounded-3xl border-[3.5px] border-black comic-shadow flex-1 min-w-[140px] max-w-[220px]">
-                  <span className="text-4xl md:text-5xl font-black block font-display text-black">
+              <div className="flex flex-wrap gap-3 sm:gap-4 mt-4 sm:mt-5">
+                <div className="bg-[#FAF7EE] text-black p-3.5 sm:p-5 rounded-3xl border-[3.5px] border-black comic-shadow flex-1 min-w-[130px] max-w-[200px]">
+                  <span className="text-3xl sm:text-4xl md:text-5xl font-black block font-display text-black leading-none">
                     500+
                   </span>
-                  <span className="text-[10px] md:text-xs uppercase tracking-widest text-neutral-700 mt-1 block font-black font-mono">
+                  <span className="text-[10px] md:text-xs uppercase tracking-wider text-neutral-700 mt-1.5 block font-black font-mono">
                     POSTERS
                   </span>
                 </div>
 
-                <div className="bg-[#FFE500] text-black p-4 md:p-6 rounded-3xl border-[3.5px] border-black comic-shadow flex-1 min-w-[140px] max-w-[220px]">
-                  <span className="text-4xl md:text-5xl font-black block font-display text-black">
+                <div className="bg-[#FFE500] text-black p-3.5 sm:p-5 rounded-3xl border-[3.5px] border-black comic-shadow flex-1 min-w-[130px] max-w-[200px]">
+                  <span className="text-3xl sm:text-4xl md:text-5xl font-black block font-display text-black leading-none">
                     6+
                   </span>
-                  <span className="text-[10px] md:text-xs uppercase tracking-widest text-black mt-1 block font-black font-mono">
+                  <span className="text-[10px] md:text-xs uppercase tracking-wider text-black mt-1.5 block font-black font-mono">
                     YEARS EXP.
                   </span>
                 </div>
@@ -249,7 +249,7 @@ export default function PortfolioPage() {
                 initial={{ opacity: 0, scale: 0.9, rotate: -3 }}
                 animate={{ opacity: 1, scale: 1, rotate: -2 }}
                 transition={{ duration: 0.8 }}
-                className="w-full max-w-sm bg-[#FAF7EE] p-3.5 pb-5 rounded-3xl border-[4px] border-black comic-shadow-lg relative"
+                className="w-full max-w-xs sm:max-w-sm bg-[#FAF7EE] p-3 pb-4 rounded-3xl border-[4px] border-black comic-shadow-lg relative"
               >
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
                   <ComicTape text="LEAD CREATIVE" />
@@ -264,8 +264,8 @@ export default function PortfolioPage() {
                   />
                 </div>
 
-                <div className="mt-3 flex items-center justify-between px-1 text-black">
-                  <span className="font-display font-black text-sm tracking-wide">SUSHANTH KUMAR</span>
+                <div className="mt-2.5 flex items-center justify-between px-1 text-black">
+                  <span className="font-display font-black text-xs sm:text-sm tracking-wide">SUSHANTH KUMAR</span>
                   <span className="text-[9px] font-mono font-bold bg-[#D2FF00] px-2 py-0.5 border border-black rounded uppercase">
                     DIRECTOR
                   </span>
@@ -277,12 +277,12 @@ export default function PortfolioPage() {
         </div>
 
         {/* Marquee Divider */}
-        <div className="mb-14">
+        <div className="mb-8 sm:mb-10">
           <ComicMarquee />
         </div>
 
-        {/* Grid of All 18 Projects */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {/* Grid of All Projects */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
           {allProjects.map((project, i) => (
             <motion.div
               key={i}
@@ -335,8 +335,8 @@ export default function PortfolioPage() {
               </div>
 
               {/* Card Bottom */}
-              <div className="pt-3 px-1">
-                <h3 className="text-base md:text-lg font-black leading-snug font-sans text-neutral-900 group-hover:text-[#2445EA] transition-colors">
+              <div className="pt-2.5 px-1">
+                <h3 className="text-sm sm:text-base md:text-[17px] font-black leading-snug font-sans text-neutral-900 group-hover:text-[#2445EA] transition-colors">
                   {project.title}
                 </h3>
               </div>

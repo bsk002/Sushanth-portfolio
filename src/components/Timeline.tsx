@@ -64,7 +64,7 @@ const timelineData: TimelineItem[] = [
 
 export default function Timeline() {
   return (
-    <section id="timeline" className="relative py-28 md:py-36 px-6 bg-[#0F0F10] bg-halftone-dark overflow-hidden">
+    <section id="timeline" className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-[#0F0F10] bg-halftone-dark overflow-hidden">
       {/* Background ambient accents */}
       <div className="absolute top-1/3 left-10 w-96 h-96 bg-[#FFE500]/5 rounded-full blur-[140px] -z-10" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#2445EA]/5 rounded-full blur-[140px] -z-10" />
@@ -72,15 +72,15 @@ export default function Timeline() {
       <div className="max-w-5xl mx-auto relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col items-start mb-16 md:mb-20">
-          <div className="flex items-center gap-2 mb-3">
+        <div className="flex flex-col items-start mb-8 sm:mb-10 md:mb-12">
+          <div className="flex items-center gap-2 mb-2.5">
             <ComicSticker text="NARRATIVE ROADMAP" color="yellow" rotate="-1.5deg" />
           </div>
           <motion.span 
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-[#FFE500] uppercase tracking-[0.4em] text-xs md:text-sm mb-3 font-extrabold font-grotesk"
+            className="text-[#FFE500] uppercase tracking-[0.25em] md:tracking-[0.35em] text-xs md:text-sm mb-2 font-extrabold font-grotesk"
           >
             The Journey So Far
           </motion.span>
@@ -88,7 +88,7 @@ export default function Timeline() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-editorial font-black tracking-tighter uppercase"
+            className="text-editorial font-black tracking-normal uppercase"
           >
             Milestone <br className="md:hidden" />
             <span className="text-white">Career Timeline</span>
@@ -96,7 +96,7 @@ export default function Timeline() {
         </div>
 
         {/* Comic Story Panels List */}
-        <div className="space-y-10 md:space-y-14 relative">
+        <div className="space-y-6 sm:space-y-7 md:space-y-8 relative">
           
           {timelineData.map((item, idx) => (
             <motion.div
@@ -108,14 +108,14 @@ export default function Timeline() {
               className="relative bg-[#FAF7EE] text-black border-[4px] border-black rounded-3xl comic-shadow-lg overflow-hidden group hover:translate-y-[-4px] hover:shadow-[10px_10px_0px_#000] transition-all duration-300"
             >
               {/* Comic Panel Header Strip */}
-              <div className={`px-6 py-3 border-b-[3px] border-black flex flex-wrap items-center justify-between gap-3 ${item.headerColor}`}>
+              <div className={`px-5 sm:px-6 py-2.5 sm:py-3 border-b-[3px] border-black flex flex-wrap items-center justify-between gap-2.5 ${item.headerColor}`}>
                 <div className="flex items-center gap-2 font-display font-black tracking-wider text-xs md:text-sm uppercase">
                   <span>★</span>
                   <span>{item.chapter}</span>
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-black text-white rounded-lg text-[10px] md:text-xs font-mono font-black uppercase tracking-wider">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 bg-black text-white rounded-lg text-[10px] md:text-xs font-mono font-black uppercase tracking-wider">
                     <Calendar size={12} className="stroke-[2.5px]" />
                     {item.period}
                   </span>
@@ -123,15 +123,15 @@ export default function Timeline() {
               </div>
 
               {/* Panel Content Body */}
-              <div className="p-6 md:p-8">
+              <div className="p-5 sm:p-6 md:p-8">
                 
                 {/* Role and Company */}
-                <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
+                <div className="flex flex-wrap items-start justify-between gap-3 mb-4 sm:mb-5">
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-black font-display tracking-tight text-black mb-1">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-black font-display tracking-wide text-black mb-1">
                       {item.company}
                     </h3>
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FFE500] border-2 border-black rounded-md text-xs font-black uppercase tracking-wider">
+                    <div className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 bg-[#FFE500] border-2 border-black rounded-md text-xs font-black uppercase tracking-wider">
                       {item.type === "work" ? (
                         <Briefcase size={12} className="stroke-[3px]" />
                       ) : (
@@ -143,10 +143,10 @@ export default function Timeline() {
                 </div>
 
                 {/* Bullets */}
-                <ul className="space-y-3.5 mb-8 text-neutral-900 text-sm md:text-base font-medium leading-relaxed font-sans">
+                <ul className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-7 text-neutral-900 text-xs sm:text-sm md:text-base font-medium leading-relaxed font-sans">
                   {item.description.map((bullet, key) => (
-                    <li key={key} className="flex items-start gap-3">
-                      <span className="inline-block mt-1 px-1 py-0.5 bg-black text-white text-[10px] font-black rounded-sm shrink-0 leading-none">
+                    <li key={key} className="flex items-start gap-2.5 sm:gap-3">
+                      <span className="inline-block mt-1 px-1 py-0.5 bg-black text-white text-[9px] sm:text-[10px] font-black rounded-sm shrink-0 leading-none">
                         ▶
                       </span>
                       <span>{bullet}</span>
@@ -155,14 +155,14 @@ export default function Timeline() {
                 </ul>
 
                 {/* Skills tags */}
-                <div className="pt-4 border-t-2 border-black/10 flex flex-wrap items-center gap-2">
-                  <span className="text-[10px] font-mono font-black uppercase text-neutral-600 mr-2">
+                <div className="pt-3.5 border-t-2 border-black/10 flex flex-wrap items-center gap-2">
+                  <span className="text-[10px] font-mono font-black uppercase text-neutral-600 mr-1.5">
                     DISCIPLINES:
                   </span>
                   {item.skills.map((skill, key) => (
                     <span 
                       key={key} 
-                      className="text-[10px] md:text-xs font-black uppercase tracking-wider bg-white text-black px-3 py-1.5 rounded-lg border-2 border-black comic-shadow-sm hover:bg-[#FFE500] transition-colors"
+                      className="text-[10px] md:text-xs font-black uppercase tracking-wider bg-white text-black px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg border-2 border-black comic-shadow-sm hover:bg-[#FFE500] transition-colors"
                     >
                       {skill}
                     </span>

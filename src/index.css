@@ -28,11 +28,18 @@
     color: #FAF7EE;
     antialiased: true;
     overflow-x: hidden;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
   }
   
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: 0.01em;
+    line-height: 1.05;
+  }
+  
+  p {
+    letter-spacing: normal;
   }
   
   ::selection {
@@ -43,15 +50,15 @@
 
 @layer utilities {
   .text-huge {
-    font-size: clamp(3.5rem, 14vw, 11rem);
-    line-height: 0.88;
-    letter-spacing: -0.04em;
+    font-size: clamp(3rem, 10vw, 8rem);
+    line-height: 0.95;
+    letter-spacing: 0.01em;
   }
   
   .text-editorial {
-    font-size: clamp(2.4rem, 7.5vw, 5.5rem);
-    line-height: 0.95;
-    letter-spacing: -0.03em;
+    font-size: clamp(2.2rem, 6vw, 4.25rem);
+    line-height: 1.08;
+    letter-spacing: 0.01em;
   }
 
   .font-comic {
