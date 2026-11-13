@@ -1,11 +1,41 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowLeft, ArrowUpRight, Maximize2, X, Sparkles } from "lucide-react";
+import { ArrowLeft, Maximize2, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ComicMarquee from "../components/ComicMarquee";
-import { ComicSticker, ComicTape, ComicBarcode, DoodleArrow } from "../components/ComicDoodles";
+import { ComicSticker, ComicTape } from "../components/ComicDoodles";
+
+type BadgeColor = "yellow" | "blue" | "red" | "lime";
+
+const badgeColors: BadgeColor[] = ["yellow", "blue", "red", "lime"];
+
+const hashtagMagazineImages = [
+  "/assets/aistudio/2_f037dd96.png",
+  "/assets/aistudio/3_532413b9.png",
+  "/assets/aistudio/6_6627b75a.png",
+  "/assets/aistudio/7_6d1e27a7.png",
+  "/assets/aistudio/8_c874ef28.png",
+  "/assets/aistudio/9_29ce28de.png",
+  "/assets/aistudio/10_4e7fd8b8.png",
+  "/assets/aistudio/12_724247f8.png",
+  "/assets/aistudio/13_d815d27e.png",
+  "/assets/aistudio/14_14108b20.png",
+  "/assets/aistudio/15_598e9623.png",
+  "/assets/aistudio/16_95bdc1a8.png",
+  "/assets/aistudio/17_2b791105.png",
+  "/assets/aistudio/18_b0427168.png",
+  "/assets/aistudio/19_f518d385.png",
+  "/assets/aistudio/20_a7d693fd.png",
+  "/assets/aistudio/21_8e688b31.png",
+  "/assets/aistudio/22_e61c4cc6.png",
+  "/assets/aistudio/23_f2d4c1cd.png",
+  "/assets/aistudio/24_c71db1b7.png",
+  "/assets/aistudio/25_548b4f11.png",
+  "/assets/aistudio/26_86177eed.png",
+  "/assets/aistudio/28_44d10029.png",
+];
 
 const allProjects = [
   {
@@ -176,6 +206,13 @@ const allProjects = [
     color: false,
     badgeColor: "blue" as const,
   },
+  ...hashtagMagazineImages.map((image, idx) => ({
+    title: "Hashtag Magazine India",
+    category: "Advertisement Poster",
+    image,
+    color: false,
+    badgeColor: badgeColors[idx % badgeColors.length],
+  })),
 ];
 
 export default function PortfolioPage() {
@@ -234,7 +271,7 @@ export default function PortfolioPage() {
 
                 <div className="bg-[#FFE500] text-black p-3.5 sm:p-5 rounded-3xl border-[3.5px] border-black comic-shadow flex-1 min-w-[130px] max-w-[200px]">
                   <span className="text-3xl sm:text-4xl md:text-5xl font-black block font-display text-black leading-none">
-                    6+
+                    4+
                   </span>
                   <span className="text-[10px] md:text-xs uppercase tracking-wider text-black mt-1.5 block font-black font-mono">
                     YEARS EXP.

@@ -107,13 +107,13 @@ export default function Hero() {
                 </span>
               </div>
 
-              {/* 6+ Years Experience Panel */}
+              {/* 4+ Years Experience Panel */}
               <div className="relative bg-[#18181A] border-[3px] border-black rounded-3xl p-4 sm:p-5 md:p-6 comic-shadow group hover:border-[#FF2B2B] transition-colors">
                 <span className="absolute -top-3 right-4 px-2.5 py-0.5 bg-[#FF2B2B] text-white border-2 border-black rounded-full text-[9px] font-black uppercase tracking-wider -rotate-2">
                   TENURE
                 </span>
                 <span className="text-3xl sm:text-4xl md:text-5xl font-black block text-white font-display tracking-tight leading-none">
-                  6+
+                  4+
                 </span>
                 <span className="text-[10px] md:text-xs uppercase tracking-wider text-neutral-300 mt-2 block font-extrabold font-grotesk">
                   Years Experience

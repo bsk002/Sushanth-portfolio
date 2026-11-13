@@ -18,7 +18,7 @@ const timelineData: TimelineItem[] = [
   {
     company: "Club Infinity Studios",
     role: "Digital Head",
-    period: "2024 - PRESENT",
+    period: "Present",
     chapter: "CHAPTER 01 // LEADERSHIP",
     headerColor: "bg-[#2445EA] text-white",
     badgeBg: "bg-[#FFE500] text-black",
@@ -33,7 +33,7 @@ const timelineData: TimelineItem[] = [
   {
     company: "Hashtag India Magazine",
     role: "Creative Design Intern",
-    period: "2023 - 2024",
+    period: "2026",
     chapter: "CHAPTER 02 // EDITORIAL",
     headerColor: "bg-[#FF2B2B] text-white",
     badgeBg: "bg-white text-black",
@@ -48,7 +48,7 @@ const timelineData: TimelineItem[] = [
   {
     company: "Creative Designing & Content Workshops",
     role: "Visual Consultant & Mentor",
-    period: "2022 - 2023",
+    period: "2026",
     chapter: "CHAPTER 03 // MENTORSHIP",
     headerColor: "bg-[#D2FF00] text-black",
     badgeBg: "bg-[#FFE500] text-black",
